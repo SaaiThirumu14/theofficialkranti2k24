@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
+import image from "./images/chronobid.webp"
+
 
 export default function ChronoBid() {
   const [isOpen, setIsOpen] = useState(false);
