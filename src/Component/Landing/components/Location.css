@@ -1,0 +1,30 @@
+/* Location.css */
+
+.location-section {
+    /* Base styles if needed, Tailwind handles most */
+  }
+  
+  .map-placeholder {
+    min-height: 300px; /* Minimum height for the map placeholder */
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly visible background */
+  }
+  
+  /* Responsive stacking */
+  @media (max-width: 767px) {
+    .location-section .container {
+      flex-direction: column;
+    }
+    .location-section .w-full.md\:w-1\/2 {
+       width: 100%; /* Ensure full width on small screens */
+       padding-left: 0; /* Reset padding */
+       padding-right: 0; /* Reset padding */
+    }
+     .map-placeholder {
+       margin-bottom: 1.5rem; /* Add space below map on mobile */
+     }
+  }
+  
+  /* Ensure Font Awesome icons load if not globally included */
+  /* You might need to install font-awesome: npm install @fortawesome/fontawesome-free */
+  /* and import it in your main JS/JSX file or index.html */
+  

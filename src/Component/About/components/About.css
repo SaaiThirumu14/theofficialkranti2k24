@@ -1,0 +1,158 @@
+/* Background Styling */
+.about-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0d0029, #290033);
+    color: white;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Title */
+  .about-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    animation: slideInFromTop 1.2s ease-in-out;
+  }
+  
+  /* Glowing Title Effect */
+  .about-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 50px;
+    height: 4px;
+    background: #ff00ff;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  /* Main Container */
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.4);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .about-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgba(255, 0, 255, 0.6);
+  }
+  
+  /* Image Styling */
+  .about-image img {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Image Hover Effect */
+  .about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.7);
+  }
+  
+  /* Content Section */
+  .about-content {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    animation: fadeInRight 1.5s ease-in-out;
+  }
+  
+  /* Heading */
+  .about-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph */
+  .about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image img {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  
+  /* =================== */
+  /* 🔥 Keyframe Animations */
+  /* =================== */
+  
+  /* Fade In Effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Slide from Top */
+  @keyframes slideInFromTop {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade In with Upward Motion */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade In from Right */
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

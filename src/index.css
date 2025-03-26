@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.explore-events-bg {
+  background-image: url('/EventBG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px; /* Adjust as needed */
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
+}
+
+.countdown-bg {
+  background-image: url('/CountBG.jpg'); /* Path to your image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  /* Ensure the background takes at least the full height of the section */
+  padding-top: 20%; /* Add some padding to control vertical space, adjust as needed */
+  padding-bottom: 20%;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for countdown section */
+}
+
+/* Vertically align the scroll-down indicator */
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-down-indicator svg {
+  margin-bottom: 4px; /* Adjust the spacing between the arrow and text */
+}
+
+/* Mobile-specific styling for the Kranti text */
+@media (max-width: 768px) {
+  .mobile-title {
+    font-size: 4rem; /* Increased font size for mobile */
+    position: relative; /* Changed to relative positioning */
+    bottom: auto; /* Reset bottom positioning */
+    left: auto; /* Reset left positioning */
+    transform: none; /* Reset transform */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; /* Add some space between the title and the scroll indicator */
+  }
+
+  /* Apply opacity gradient to the background */
+  .bg-opacity-50 {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .landing-section-container {
+    display: flex;
+    height: 100vh;
+  }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .text-content {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: 1;
+  }
+
+  .mobile-title {
+    font-size: 5rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .landing-section-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .gradient-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    z-index: 1;
+  }
+
+  .mobile-title {
+    font-size: 4rem;
+  }
+}

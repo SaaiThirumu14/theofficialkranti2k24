@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Ensure font is applied */
+}
+
+.text-blend {
+  /* Mix-blend-mode can sometimes cause issues with text visibility over complex backgrounds */
+  /* Consider removing or adjusting if text isn't clear */
+  /* mix-blend-mode: screen; */
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7); /* Darker shadow for contrast */
+  font-weight: bold;
+}
+
+.explore-events-bg {
+  background-image: url('/EventBG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Removed fixed height to allow content to define height */
+  /* height: 600px; */
+  padding-top: 10%; /* Added padding */
+  padding-bottom: 10%; /* Added padding */
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+}
+
+/* Removed .countdown-bg as the section is removed */
+/* .countdown-bg { ... } */
+
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20; /* Ensure it's above video */
+}
+
+.scroll-down-indicator svg {
+  margin-bottom: 4px;
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 767px) {
+  .mobile-title {
+    font-size: 3.5rem; /* Slightly smaller on mobile */
+    text-align: center;
+    margin-bottom: 5px; /* Reduced margin */
+  }
+
+  /* Ensure the text container is centered and has some padding */
+  .relative.z-10.px-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Adjust the background overlay for mobile */
+  .bg-opacity-50.md\:bg-opacity-0 {
+     background-color: rgba(0, 0, 0, 0.6); /* Darker overlay on mobile for text contrast */
+  }
+
+  /* Hide desktop description, ensure countdown is visible */
+   .text-lg.md\:text-xl.hidden.md\:block {
+     display: none;
+   }
+
+   /* Center the small countdown on mobile */
+   .flex.justify-center.space-x-2.md\:space-x-4 {
+     justify-content: center;
+   }
+}
+
+/* Desktop Adjustments */
+@media (min-width: 768px) {
+   .mobile-title {
+     font-size: 5rem; /* Keep original desktop size */
+   }
+   /* Ensure text alignment is correct on desktop */
+   .relative.z-10.px-4.md\:pr-12 {
+     align-items: flex-end;
+   }
+   .flex.flex-col.items-center.md\:items-end {
+     align-items: flex-end;
+   }
+}
+
+/* General Landing Section Text Content Alignment */
+.landing-text-content {
+  position: relative;
+  z-index: 10;
+  width: 90%; /* Constrain width slightly */
+  max-width: 600px; /* Max width for readability */
+  margin: 0 auto; /* Center container */
+  text-align: center; /* Center text by default */
+}
+
+@media (min-width: 768px) {
+  .landing-text-content {
+    width: auto; /* Reset width */
+    max-width: none; /* Reset max-width */
+    margin: 0; /* Reset margin */
+    margin-right: 3rem; /* Add right margin for desktop */
+    text-align: right; /* Align text to the right */
+  }
+}
