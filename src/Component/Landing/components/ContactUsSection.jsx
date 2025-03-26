@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ContactUsSection() {
   return (
@@ -10,19 +11,18 @@ function ContactUsSection() {
           the exciting events we have planned. Click the buttons below to explore!
         </p>
         <div className="mt-8 flex flex-col items-start space-y-2 md:flex-row md:space-x-4 md:space-y-0">
-          <a
-            href="/about"
+          <Link
+            to="/About"
             className="inline-block px-6 py-2 rounded-full bg-black text-white font-bold border border-sky-500 hover:bg-gray-800 transition-colors duration-300"
           >
             FAQs
-          </a>
-          <a
-            href="/dev"
+          </Link>
+          <Link
+            to="/Dev"
             className="inline-block px-6 py-2 rounded-full bg-black text-white font-bold border border-sky-500 hover:bg-gray-800 transition-colors duration-300"
           >
             Contact Our Team
-          </a>
-          
+          </Link>
         </div>
       </div>
     </div>

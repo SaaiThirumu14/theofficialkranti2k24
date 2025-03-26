@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ExploreEventsSection() {
   return (
@@ -10,12 +11,12 @@ function ExploreEventsSection() {
           including technical workshops, cultural performances, and sports
           competitions. There's something for everyone!
         </p>
-        <a
-          href="/event"
+        <Link
+          to="/event"
           className="inline-block mt-8 px-6 py-2 rounded-full bg-black text-white font-bold border border-sky-500 hover:bg-gray-800 transition-colors duration-300"
         >
           View Events
-        </a>
+        </Link>
       </div>
     </div>
   );
