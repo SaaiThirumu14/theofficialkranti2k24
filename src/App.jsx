@@ -30,7 +30,6 @@ const App = () => {
         <Route path="/lyric" element={<LyricQuest />} />
         <Route path="/inter" element={<Interstellar />} />
         <Route path="/picto" element={<PictoWord />} />
-        
       </Routes>
     </Router>
   )
